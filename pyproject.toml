@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "hello-huggingface"
+version = "0.1.0"
+description = "Learning the huggingface library"
+authors = ["Aadhithya Sankar <aadhithya.s@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "hello_huggingface"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = {url = "https://download.pytorch.org/whl/cu116/torch-1.13.1%2Bcu116-cp39-cp39-linux_x86_64.whl"}
+numpy = "^1.24.1"
+transformers = "^4.25.1"
+loguru = "^0.6.0"
+matplotlib = "^3.6.3"
+tensorboard = "^2.11.2"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^2.39.1"
+pre-commit = "^2.21.0"
+flake8 = "^6.0.0"
+black = "^22.12.0"
+ipykernel = "^6.20.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
